@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="/css/todo.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header class="app_header">
+        <button class="exitButton"></button>
+        <h1>To Do List</h1>
+    </header>
+    <main>
+        <div class="loginPanel">
+                <h2>Login</h2>
+                <label for="usernameLogin">Username: <input type="text" name="usernameLogin" id="usernameLogin" autofocus required></label>
+                <button class="loginButton">Login</button>
+                <br>
+                <span class="remember">
+                    <label for="staySignedIn"><input type="checkbox" id="staySignedIn">Stay signed in?</label>
+                </span>
+                <p>New here? <a href="#SignUp" class="toggleLS">Sign up instead!</a></p>
+        </div>
+        <div class="signUpPanel hidden">
+                <h2>Sign Up</h2>
+                <label for="usernameSignUp">Username: <input type="text" name="usernameSignUp" id="usernameSignUp" required></label>
+                <button class="signupButton">Signup</button>
+                <br>
+                <span class="remember">
+                    <label for="staySignedIn"><input type="checkbox" id="staySignedIn">Stay signed in?</label>
+                </span>
+                <p>Already a user? <a href="#Login" class="toggleLS">Login instead!</a></p>
+        </div>
+        <div class="taskPanel hidden">
+            <h2 class="taskHeader">Tasks</h2>
+            <table class="taskTable">
+                <thead>
+                    <tr class="tableLabels">
+                        <th>Task Name</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="editTaskBar">
+                        <td><input type="text" class="editText" required></td>
+                        <td><select class="editSelect" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select></td>
+                        <td><input type="date" class="editDate" required></td>
+                        <td><button class="editButton"></button></td>
+                    </tr>
+                </tbody>
+                <tbody class="taskTableBody">
+                    <!-- Area to render task list -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="app_footer">
+        <p>Login to track your daily tasks</p>
+    </footer>
+    <script src="/js/todo.js"></script>
+</body>
+</html>
